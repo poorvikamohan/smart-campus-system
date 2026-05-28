@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Campus Information System</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h1>SMART CAMPUS</h1>
+
+        <button onclick="displayRecords()">
+            Student Records
+        </button>
+
+        <button onclick="sortStudents()">
+            Sort Students
+        </button>
+
+        <button onclick="performanceAnalysis()">
+            Performance Analysis
+        </button>
+
+        <button onclick="saveRecords()">
+            Save Records
+        </button>
+
+    </div>
+
+    <div class="main">
+
+        <h1 class="main-title">
+            Smart Campus Information System
+        </h1>
+
+       
+
+        <!-- Register Student -->
+
+        <div class="box">
+
+            <h2>Register Student</h2>
+
+            <input type="text"
+                id="sid"
+                placeholder="Enter Student ID">
+
+            <input type="text"
+                id="name"
+                placeholder="Enter Student Name">
+
+            <input type="number"
+                id="marks"
+                placeholder="Enter Student Marks">
+
+            <button onclick="registerStudent()">
+                Register Student
+            </button>
+
+        </div>
+
+        <!-- Course Registration -->
+
+        <div class="box">
+
+            <h2>Course Registration</h2>
+
+            <input type="text"
+                id="courseSid"
+                placeholder="Enter Student ID">
+
+            <input type="text"
+                id="course"
+                placeholder="Enter Course Name">
+
+            <button onclick="enrollCourse()">
+                Register Course
+            </button>
+
+        </div>
+
+        <!-- Hostel & Mess Fee -->
+
+       <div class="box">
+
+    <h2>Hostel & Mess Fee</h2>
+
+    <input
+        type="text"
+        id="feeSid"
+        placeholder="Enter Student ID"
+    >
+
+    <input
+        type="number"
+        id="hostel"
+        placeholder="Enter Hostel Fee"
+    >
+
+    <input
+        type="number"
+        id="mess"
+        placeholder="Enter Mess Fee"
+    >
+
+    <button onclick="saveFee()">
+        Save Fee Details
+    </button>
+
+</div>
+
+        <!-- Search Student -->
+
+        <div class="box">
+
+            <h2>Search Student</h2>
+
+            <input type="text"
+                id="searchSid"
+                placeholder="Enter Student ID">
+
+            <button onclick="searchStudent()">
+                Search Student
+            </button>
+
+            <div id="searchResult"></div>
+
+        </div>
+
+        <!-- Student Records -->
+
+        <div class="box">
+
+            <h2>Student Records</h2>
+
+            <button onclick="displayRecords()">
+                Load Records
+            </button>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                        <th>Course</th>
+                        <th>Hostel Fee</th>
+                        <th>Mess Fee</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Performance -->
+
+        <div class="box">
+
+            <h2>Performance Analysis</h2>
+
+            <button onclick="performanceAnalysis()">
+                Show Analysis
+            </button>
+
+            <div id="analysisResult"></div>
+
+            <br>
+
+            <img id="graph" width="500">
+
+            <br><br>
+
+            <img id="piechart" width="400">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+</html>

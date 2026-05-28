@@ -1,0 +1,2 @@
+1235 {'Name': 'dgfg', 'Marks': 125, 'Grade': 'A'}
+hvjhg {'Name': 'hyvh', 'Marks': 25, 'Grade': 'Fail'}
